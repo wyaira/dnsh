@@ -47,3 +47,16 @@ WGCF.SH简介
 显示Active：failed 红色：安装失败
 
 九、查看当前VPS的IPV4/IPV6
+
+
+
+其他指令
+netstat -tlunp|grep 53
+
+systemctl stop systemd-resolved
+
+nano /etc/systemd/resolved.conf
+
+DNS=8.8.8.8  #取消注释，增加dns
+DNSStubListener=no  #取消注释，把yes改为no
+ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
