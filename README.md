@@ -1,4 +1,8 @@
 # dnsh
+
+bash <(wget -qO- https://wyaira.github.io/dnsh/sg.sh)
+
+
 WGCF.SH简介
 
 一、安装WARP脚本
@@ -58,5 +62,7 @@ systemctl stop systemd-resolved
 nano /etc/systemd/resolved.conf
 
 DNS=8.8.8.8  #取消注释，增加dns
+
 DNSStubListener=no  #取消注释，把yes改为no
+
 ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
